@@ -1,31 +1,5 @@
-# library(data.table)
-# library(httr)
-# library(htmltools)
-# library(jsonlite)
-# library(tidyverse)
-# library(lubridate)
-# library(zoo)
-
-
-#
-# res <- GET(paste0(allowanceUrl, "&transactionBeginDate=1994-01-01&transactionEndDate=2024-07-15"))
-# allowTrans <- fromJSON(rawToChar(res$content))
-# allowTrans <- allowTrans %>% mutate_all(~replace(., is.na(.), "NULL"))
-# allowTrans <- allowTrans %>% mutate(across(everything(), ~gsub("[[:punct:]]", " ", .x)))
-# allowTrans$transactionDate <- as.Date(allowTrans$transactionDate, format = "%Y %m %d")
-# allowTrans$totalBlock <- as.numeric(allowTrans$totalBlock)
-# save(allowTrans,file="./data/allowanceTransaction/allowTrans.RData")
-
-# allowTrans <- read.csv("./data/allowanceTransaction.csv")
-# print(fromJSON(rawToChar(res$content))$error$message)
-#anyNA(allowTrans$sellOwner)
-
-# glimpse(allowTrans)
-
-# Load packages ----------------------------------------------------------------
-
-# Package names
-packages <- c("shiny", "ggplot2", "tidyquant", "dplyr", "jsonlite", "readr", "httr", "htmltools", "shinyWidgets")
+#Short list of packages for posit connect limit
+packages <- c("shiny", "ggplot2", "dplyr", "readr", "shinyWidgets")
 
 # Install packages not yet installed
 install.packages(packages[!(packages %in% rownames(installed.packages()))], repos = "http://cran.us.r-project.org")
