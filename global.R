@@ -28,7 +28,7 @@
 packages <- c("shiny", "ggplot2", "tidyquant", "dplyr", "jsonlite", "readr", "httr", "htmltools", "shinyWidgets")
 
 # Install packages not yet installed
-install.packages(packages[!(packages %in% rownames(installed.packages()))])
+install.packages(packages[!(packages %in% rownames(installed.packages()))], repos = "http://cran.us.r-project.org")
 
 # Packages loading
 invisible(lapply(packages, library, character.only = TRUE))
